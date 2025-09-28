@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasmatic Tools - Web3 Tools for Plasma Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Plasmatic</h1>
+                <p>Web3 Tools for Plasma</p>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="#dashboard" class="nav-link" data-page="dashboard">
+                            <span class="nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="tools-section">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#token-creation" class="nav-link" data-page="token-creation">
+                                <span class="nav-icon">🪙</span>
+                                Token Creation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#token-locker" class="nav-link" data-page="token-locker">
+                                <span class="nav-icon">🔒</span>
+                                Token Locker
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#liquidity-locker" class="nav-link" data-page="liquidity-locker">
+                                <span class="nav-icon">🏦</span>
+                                Liquidity Locker
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#token-vesting" class="nav-link" data-page="token-vesting">
+                                <span class="nav-icon">⏰</span>
+                                Token Vesting
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#multi-send" class="nav-link" data-page="multi-send">
+                                <span class="nav-icon">📤</span>
+                                Multi-Send
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h2 id="page-title">Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <div class="network-info" id="network-info">
+                        <span class="network-status">🔴 Not Connected</span>
+                    </div>
+                    <button class="connect-wallet-btn" id="connect-wallet">
+                        Connect Wallet
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Dashboard Page -->
+                <div id="dashboard-page" class="page active">
+                    <div class="welcome-section">
+                        <h1>Welcome to Plasmatic</h1>
+                        <p>Your comprehensive Web3 toolkit for the Plasma Network. Deploy tokens, lock liquidity, manage vesting schedules, and more.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Network Status</h3>
+                            <p id="network-status">Checking...</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Your Balance</h3>
+                            <p id="balance-display">Connect wallet to view</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Chain ID</h3>
+                            <p>9745</p>
+                        </div>
+                    </div>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🪙</div>
+                            <h3>Token Creation</h3>
+                            <p>Create custom tokens with configurable supply, name, and symbol on Plasma Network.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Token Locker</h3>
+                            <p>Lock tokens on-chain for community confidence with customizable duration and cliff periods.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏦</div>
+                            <h3>Liquidity Locker</h3>
+                            <p>Protect LP positions by locking liquidity with defined unlock schedules.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⏰</div>
+                            <h3>Token Vesting</h3>
+                            <p>Set structured vesting schedules for teams, advisors, and investors.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📤</div>
+                            <h3>Multi-Send</h3>
+                            <p>Send tokens to multiple wallets in a single transaction, perfect for airdrops.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Pages -->
+                <div id="token-creation-page" class="page">
+                    <div class="coming-soon">
+                        <h1>Token Creation</h1>
+                        <div class="timer-container">
+                            <h2>Coming Soon</h2>
+                            <div class="countdown-timer" id="countdown-timer">
+                                <div class="time-unit">
+                                    <span class="time-number" id="hours">24</span>
+                                    <span class="time-label">Hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number" id="minutes">00</span>
+                                    <span class="time-label">Minutes</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number" id="seconds">00</span>
+                                    <span class="time-label">Seconds</span>
+                                </div>
+                            </div>
+                            <p>This feature will be available soon. Stay tuned!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="token-locker-page" class="page">
+                    <div class="coming-soon">
+                        <h1>Token Locker</h1>
+                        <div class="timer-container">
+                            <h2>Coming Soon</h2>
+                            <div class="countdown-timer">
+                                <div class="time-unit">
+                                    <span class="time-number">24</span>
+                                    <span class="time-label">Hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Minutes</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Seconds</span>
+                                </div>
+                            </div>
+                            <p>Lock your tokens securely on-chain. Coming soon!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="liquidity-locker-page" class="page">
+                    <div class="coming-soon">
+                        <h1>Liquidity Locker</h1>
+                        <div class="timer-container">
+                            <h2>Coming Soon</h2>
+                            <div class="countdown-timer">
+                                <div class="time-unit">
+                                    <span class="time-number">24</span>
+                                    <span class="time-label">Hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Minutes</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Seconds</span>
+                                </div>
+                            </div>
+                            <p>Protect your LP positions with our liquidity locker. Coming soon!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="token-vesting-page" class="page">
+                    <div class="coming-soon">
+                        <h1>Token Vesting</h1>
+                        <div class="timer-container">
+                            <h2>Coming Soon</h2>
+                            <div class="countdown-timer">
+                                <div class="time-unit">
+                                    <span class="time-number">24</span>
+                                    <span class="time-label">Hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Minutes</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Seconds</span>
+                                </div>
+                            </div>
+                            <p>Manage token vesting schedules with ease. Coming soon!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="multi-send-page" class="page">
+                    <div class="coming-soon">
+                        <h1>Multi-Send</h1>
+                        <div class="timer-container">
+                            <h2>Coming Soon</h2>
+                            <div class="countdown-timer">
+                                <div class="time-unit">
+                                    <span class="time-number">24</span>
+                                    <span class="time-label">Hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Minutes</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number">00</span>
+                                    <span class="time-label">Seconds</span>
+                                </div>
+                            </div>
+                            <p>Send tokens to multiple addresses in one transaction. Coming soon!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
